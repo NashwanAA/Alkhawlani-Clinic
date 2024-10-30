@@ -253,7 +253,181 @@ body.arabic {
     text-decoration: none;
     color: #333;
 }
-
-.social-media a:hover {
-    color: #007bff; /* يمكنك اختيار اللون المناسب */
+<section id="gallery" class="gallery">
+    <h2>معرض الصور</h2>
+    <div class="gallery-container">
+        <img src="image1.jpg" alt="صورة من العيادة" width="200" height="150">
+        <img src="image2.jpg" alt="غرفة العلاج" width="200" height="150">
+        <img src="image3.jpg" alt="تجهيزات العيادة" width="200" height="150">
+        <img src="image4.jpg" alt="طاقم العيادة" width="200" height="150">
+    </div>
+</section>
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
+.gallery-container img {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+<section id="testimonials" class="testimonials">
+    <h2>آراء المرضى</h2>
+    <div class="testimonial">
+        <p>"تجربة رائعة! العناية والاهتمام بالتفاصيل كانت ممتازة." - <strong>محمد علي</strong></p>
+    </div>
+    <div class="testimonial">
+        <p>"أفضل عيادة أسنان زرتها، وأوصي بها بشدة." - <strong>أميرة أحمد</strong></p>
+    </div>
+    <div class="testimonial">
+        <p>"الخدمة الرائعة والمهنية التي تتوقعها من الأفضل." - <strong>خالد سعيد</strong></p>
+    </div>
+</section>
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+}
+.testimonial {
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+<section id="blog" class="blog">
+    <h2>مقالات ونصائح</h2>
+    <article class="blog-post">
+        <h3>فوائد تنظيف الأسنان بشكل دوري</h3>
+        <p>التنظيف الدوري للأسنان يحمي الفم من التسوس ويحافظ على صحة اللثة...</p>
+        <a href="#">قراءة المزيد</a>
+    </article>
+    <article class="blog-post">
+        <h3>أحدث تقنيات زراعة الأسنان</h3>
+        <p>زراعة الأسنان تطورت كثيراً في السنوات الأخيرة وتساعد المرضى في...</p>
+        <a href="#">قراءة المزيد</a>
+    </article>
+</section>
+.blog-post {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+.blog-post h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+.blog-post a {
+    color: #007bff;
+    text-decoration: none;
+}
+<section id="appointment" class="appointment">
+    <h2>حجز موعد</h2>
+    <form action="submit_appointment.php" method="post">
+        <label for="name">الاسم:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="phone">رقم الهاتف:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="date">تاريخ الموعد:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">وقت الموعد:</label><br>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <input type="submit" value="حجز الموعد">
+    </form>
+</section>
+.appointment form {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 400px;
+}
+.appointment label {
+    font-weight: bold;
+}
+.appointment input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+/* تحسين شكل الأزرار */
+button, .appointment input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .appointment input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* حركة بسيطة عند تمرير الماوس فوق الصور */
+.gallery-container img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+<section id="location" class="location">
+    <h2>موقع العيادة</h2>
+    <p>يمكنكم العثور علينا في العنوان التالي: إب مفرق جبلة جوار الكريمي.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.3561440894644!2d-122.41941618467724!3d37.77492967975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808ec1eafbb7%3A0x4e9f9b4c7b2c9194!2z2KfZhNmG2YrYtdin2YYg2KfZhNmF2YbYqSDYp9mE2KfZhdi12LEgMjM!5e0!3m2!1sar!2seg!4v1638471682791!5m2!1sar!2seg" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+</section>
+.testimonial {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    margin-right: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+<section id="special-offers" class="special-offers">
+    <h2>العروض الخاصة</h2>
+    <div class="offer">
+        <h3>خصم 20% على تنظيف الأسنان</h3>
+        <p>عرض لفترة محدودة لجميع المرضى الجدد.</p>
+        <button>احجز الآن</button>
+    </div>
+    <div class="offer">
+        <h3>جلسة استشارة مجانية</h3>
+        <p>احصل على استشارة مجانية حول علاج الأسنان التجميلي.</p>
+        <button>احجز الآن</button>
+    </div>
+</section>
+.special-offers {
+    background-color: #f7f7f7;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.offer {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.offer button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.offer button:hover {
+    background-color: #218838;
+}
+
